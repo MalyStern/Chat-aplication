@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'pages/login_page.dart';
-import 'theme/theme_provider.dart';
+import '../Theme/theme_provider.dart';
+import '../pages/login_page.dart';
 
-void main(){
+void main() {
   runApp(
     ChangeNotifierProvider(
       create: (context) => ThemeProvider(),
-      child: MyApp()
-    )
+      child: MyApp(),
+    ),
   );
 }
 
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
   const MyApp();
 
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: LoginPage(),
@@ -23,4 +23,3 @@ class MyApp extends StatelessWidget{
     );
   }
 }
-
