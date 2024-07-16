@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 
-class MyBotton extends StatelessWidget {
+class MyButton extends StatelessWidget {
   final Function()? onTap;
   final String text;
 
-  const MyBotton({
-    required this.onTap,
-    required this.text,
-  });
+  const MyButton({required this.onTap, required this.text});
 
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -19,13 +16,11 @@ class MyBotton extends StatelessWidget {
           color: Theme.of(context).colorScheme.secondary,
           borderRadius: BorderRadius.circular(8),
         ),
-        child: Center(
-          child: Text(
-            text,
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-            ),
+        child: Text(
+          text,
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
           ),
         ),
       ),
